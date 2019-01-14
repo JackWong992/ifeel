@@ -1,9 +1,10 @@
 <template>
 
         <button class="g-button" :class="{[`icon-${iconPosition}`]: true}">
-            <svg class="icon" v-if="icon">
-                <use :xlink:href=`#i-${icon}`></use>
-            </svg>
+            <!--<svg class="icon" v-if="icon">-->
+                <!--<use :xlink:href=`#i-${icon}`></use>-->
+            <!--</svg>-->
+            <g-icon v-if="icon" :name="icon"></g-icon>
             <div class="content">
                 <slot></slot>
             </div>
@@ -49,7 +50,8 @@
         color: var(--color);
         border: 1px solid  var(--border-color);
         &:hover {
-            background: var(--border-color-hover);
+            /*background: var(--border-color-hover);*/
+            opacity: .8;
         }
         &:active {
             background: var(--button-active-bg);
