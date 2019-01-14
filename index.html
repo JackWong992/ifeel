@@ -12,6 +12,7 @@
             margin: 0;
             padding: 0;
         }
+
         :root {
             --button-height: 32px;
             --font-size: 14px;
@@ -22,9 +23,11 @@
             --border-color: #666;
             --border-color-hover: #999;
         }
+
         #app {
             margin: 20px;
         }
+
         body {
             font-size: var(--font-size);
         }
@@ -34,9 +37,12 @@
     </style>
 </head>
 <body>
-    <div id="app">
-        <g-button/>
-    </div>
-    <script src="./src/app.js"></script>
+<div id="app">
+    <g-button icon="setting">你好</g-button>
+    <g-button icon="setting" icon-position="left">hello</g-button>
+    <g-button icon="setting"  >hi</g-button>
+</div>
+<script src="./src/app.js"></script>
+<script src="//at.alicdn.com/t/font_1015470_svreaylo7sl.js"></script>
 </body>
 </html>

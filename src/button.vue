@@ -1,17 +1,41 @@
 <template>
-    <div>
-        <button class="g-button">你好</button>
-    </div>
+
+        <button class="g-button" :class="{[`icon-${iconPosition}`]: true}">
+            <svg class="icon" v-if="icon">
+                <use :xlink:href=`#i-${icon}`></use>
+            </svg>
+            <div class="content">
+                <slot></slot>
+            </div>
+        </button>
+
 </template>
 
 <script>
     export default {
         // name: "button"
+        props: {
+            icon: {
+                type: String,
+               // default: 'setting'
+            },
+            iconPosition: {
+                type: String,
+                default: 'right',
+                validate(value){
+                    console.log(value);
+                }
+            }
+        }
     }
 </script>
 
 <style scoped lang="scss">
     .g-button {
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        vertical-align: middle;
         padding: 0 1em;
         height: var(--button-height);
         font-size: var(--font-size);
@@ -28,5 +52,29 @@
         &:focus {
             outline: none;
         }
+        > .content {
+            order: 2;
+        }
+        > .icon {
+            order: 1;
+            margin-right: .3em;
+        }
+        &.icon-right {
+            > .content {
+                order: 1;
+            }
+            > .icon {
+                margin-right: 0;
+                margin-left: .3em;
+                order: 2;
+            }
+        }
+    }
+    .icon {
+        width: 1em;
+        height: 1em;
+        vertical-align: -0.15em;
+        fill: currentColor;
+        overflow: hidden;
     }
 </style>
