@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/JackWong992/ifeel/issues"
   },
-  "homepage": "https://github.com/JackWong992/ifeel#readme"
+  "homepage": "https://github.com/JackWong992/ifeel#readme",
+  "dependencies": {
+    "vue": "^2.5.22"
+  }
 }
