@@ -22,9 +22,14 @@
             iconPosition: {
                 type: String,
                 default: 'right',
-                validate(value){
-                    console.log(value);
+                validator(value){
+                    if(value !=='right'&& value!=='left'){
+                        return false
+                    }else {
+                        return true
+                    }
                 }
+
             }
         }
     }
