@@ -11,8 +11,12 @@
 </template>
 
 <script>
+    import Icon from './icon'
     export default {
         // name: "button"
+        components: {
+            'g-icon': Icon
+        },
         props: {
             icon: {
                 type: String,
@@ -48,17 +52,16 @@
         }
     }
     .g-button {
+        font-size: var(--font-size);
+        height: var(--button-height);
+        padding: 0 1em;
+        border-radius: var(--border-radius);
+        border: 1px solid  var(--border-color);
+        background: var(--button-bg);
         display: inline-flex;
         justify-content: center;
         align-items: center;
         vertical-align: middle;
-        padding: 0 1em;
-        height: var(--button-height);
-        font-size: var(--font-size);
-        background: var(--button-bg);
-        border-radius: var(--border-radius);
-        color: var(--color);
-        border: 1px solid  var(--border-color);
         &:hover {
             /*background: var(--border-color-hover);*/
             opacity: .8;
@@ -91,11 +94,5 @@
     .loading {
         animation: spin 1s infinite linear;
     }
-    .icon {
-        width: 1em;
-        height: 1em;
-        vertical-align: -0.15em;
-        fill: currentColor;
-        overflow: hidden;
-    }
+
 </style>
