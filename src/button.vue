@@ -3,7 +3,7 @@
     @click="$emit('click')">
         <g-icon v-if="icon && !loading " :name="icon" class="icon"></g-icon>
         <g-icon v-if="loading" name="loading" class="loading icon"></g-icon>
-        <div class="content">
+        <div class="g-button-content">
                 <slot></slot>
         </div>
     </button>
@@ -69,20 +69,21 @@
         &:focus {
             outline: none;
         }
-        > .content {
+        > .g-button-content {
             order: 2;
         }
         > .icon {
             order: 1;
-            margin-right: .3em;
+            margin-right:.1em;
         }
+
         &.icon-right {
-            > .content {
+            > .g-button-content {
                 order: 1;
             }
             > .icon {
                 margin-right: 0;
-                margin-left: .3em;
+                margin-left: .1em;
                 order: 2;
             }
         }
