@@ -52,7 +52,11 @@
             :loading="loading3"
             @click="loading3 = !loading3"
             icon-position="left">按钮</g-button>
-    <g-icon name="loading"></g-icon>
+    <g-button-group>
+        <g-button icon="left" icon-position="left">上一页</g-button>
+        <g-button>更多</g-button>
+        <g-button icon="right">下一页</g-button>
+    </g-button-group>
 </div>
 <script src="./src/app.js"></script>
 <script src="//at.alicdn.com/t/font_1015470_1nlruyzvhwh.js"></script>
