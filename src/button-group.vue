@@ -6,7 +6,17 @@
 
 <script>
     export default {
-        name: "button-group"
+        name: "button-group",
+        //检测button-group的子元素
+        mounted() {
+            for( let node of this.$el.children){
+                let name = node.nodeName.toLocaleLowerCase()
+                if(name !== 'button'){
+                    console.warn(`button-group的子元素应该为button,而您输入的为${name}`)
+                }
+            }
+
+        }
     }
 </script>
 
