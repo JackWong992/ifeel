@@ -5,6 +5,7 @@
 </template>
 
 <script>
+    import './icon'
     export default {
         name: "icon",
         props: ['name']

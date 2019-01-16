@@ -63,7 +63,7 @@
         align-items: center;
         vertical-align: middle;
         &:hover {
-            /*background: var(--border-color-hover);*/
+            /*background: #eee;*/
             opacity: .8;
         }
         &:active {
