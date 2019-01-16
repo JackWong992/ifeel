@@ -6,7 +6,7 @@
 
 <script>
     export default {
-        name: "button-group",
+        name: "g-button-group",
         //检测button-group的子元素
         mounted() {
             for( let node of this.$el.children){
