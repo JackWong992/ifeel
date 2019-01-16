@@ -13,7 +13,12 @@ new Vue({
         loading1: false,
         loading2: false,
         loading3: false
+    },
+  methods: {
+    inputChange(e){
+      console.log(e.target.value);
     }
+  }
 })
 import chai from 'chai'
 import spies from 'chai-spies'

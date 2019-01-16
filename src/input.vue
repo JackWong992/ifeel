@@ -4,10 +4,14 @@
                 v-bind:value="value"
                 :disabled="disabled"
                 :readonly="readonly"
+                @change="$emit('change',$event.target.value)"
+                @input="$emit('input',$event.target.value)"
+                @focus="$emit('focus',$event.target.value)"
+                @blur="$emit('blur',$event.target.value)"
                 type="text">
         <template>
             <icon name="error" v-if="error" class="icon-error"></icon>
-            <span class="error-message">{{error}}</span>
+            <span class="errorMessage">{{error}}</span>
         </template>
         <template>
             <icon name="info" v-if="info" class="icon-info"></icon>
@@ -74,9 +78,9 @@
         &.error {
             > input {border: 1px solid $error-color;}
         }
-        
+
         .icon-error {fill: $error-color;}
-        .error-message {color: $error-color;}
+        .errorMessage {color: $error-color;}
         .icon-info {fill: #46a0fc;}
 
     }
