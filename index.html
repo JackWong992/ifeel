@@ -56,6 +56,18 @@
             :readonly="true"
         ></g-input>
     </div>
+    <!--erro状态-->
+    <div class="box">
+        <g-input value="黄"
+                 error="姓名不能少于2个字"
+        ></g-input>
+    </div>
+    <!--info状态-->
+    <div class="box">
+        <g-input value="黄"
+                 info="信息正确"
+        ></g-input>
+    </div>
     <div class="box">
         <g-button :loading="loading1"
                   @click="loading1 = !loading1"
